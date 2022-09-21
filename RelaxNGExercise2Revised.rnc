@@ -1,0 +1,21 @@
+start = label
+label = element xml { source, poem }
+source = element source { title, author, date,when }
+title = element title { level, text}
+author = element author { text }
+date = element date { when, empty, text }
+neg = element neg { text+ }
+para1 = element para1 { text, source}
+para2 = element para2 { text }
+level = element level { "poem" | "inner"  }
+when = element when { xsd:date | xsd:gYearMonth | xsd:gYear }
+poem = element poem { title, para1+, para2+ }
+self = element self { text }
+place = element place { ref, text }
+ref = attribute ref { text }
+weather = element weather {text}
+month = element month {text}
+
+
+
+
